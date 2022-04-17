@@ -1,9 +1,6 @@
 #1
 #2
 #3
-#4
-#5
-#docoloter:
 back = (200,255,255)
 win_width = 600
 win_height = 500
@@ -24,3 +21,7 @@ font.init()
 font = font.Font("calibri.ttf",35)
 lose1 = font.render('PLAYER 1 LOSE!',True,(180,0,0))
 lose2 = font.render('PLAYER 2 LOSE!',True,(180,0,0))
+#4
+#5
+#docoloter:
+
