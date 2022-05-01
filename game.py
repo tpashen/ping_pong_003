@@ -53,6 +53,9 @@ speed_x = 3
 speed_y = 3
 #4
 while game:
+    #background = transform.scale(image.load("background.jpg"), (win_width, win_height))
+    В цикле while
+    # window.blit(background,(0, 0))
     for e in event.get():
         if e.type == QUIT:
             game = False
