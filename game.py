@@ -12,12 +12,6 @@ class GameSprite(sprite.Sprite):
     def reset(self):
         window.blit(self.image, (self.rect.x, self.rect.y))
 #
-
-#музыка
-#mixer.init()
-#mixer.music.load('')
-#mixer.music.play()
-
 class Player(GameSprite):
     def update_r(self):
         keys = key.get_pressed()
@@ -32,6 +26,9 @@ class Player(GameSprite):
         if keys[K_s] and self.rect.y < win_height - 80:
             self.rect.y += self.speed
 #3
+mixer.init()
+mixer.music.load('sound.mp3')
+mixer.music.play()
 back = (200, 255, 255)
 win_width = 600
 win_height = 500
