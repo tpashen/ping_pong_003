@@ -53,14 +53,12 @@ speed_x = 3
 speed_y = 3
 #4
 while game:
-    #background = transform.scale(image.load("background.jpg"), (win_width, win_height))
-    В цикле while
-    # window.blit(background,(0, 0))
     for e in event.get():
         if e.type == QUIT:
             game = False
     if finish != True:
-        window.fill(back)
+        background = transform.scale(image.load("back.jpg"), (win_width, win_height))
+        window.blit(background,(0, 0))
         racket1.update_l()
         racket2.update_r()
         ball.rect.x += speed_x
@@ -68,6 +66,7 @@ while game:
         if sprite.collide_rect(racket1,ball) or sprite.collide_rect(racket2, ball):
             speed_x *= -1
             speed_y *= 1
+
 #5
         if ball.rect.y > win_height-50 or ball.rect.y < 0:
             speed_y *= -1
